@@ -1,0 +1,217 @@
+[
+  {
+    "skill_id": "skill_c30140b3",
+    "skill_name": "FIX_FLOW_PORT_CONFLICT",
+    "skill_type": "REPAIR_SKILL",
+    "description": "Clear zombie process and restart FLOW",
+    "goal_pattern": "fix FLOW port conflict",
+    "problem_pattern": "PORT_CONFLICT",
+    "project_scope": "FLOW",
+    "parameters": {},
+    "required_preconditions": [
+      "project_exists"
+    ],
+    "workflow_steps": [
+      {
+        "action": "terminate_conflicting_processes",
+        "target": "{project}"
+      },
+      {
+        "action": "restart_project_server",
+        "target": "{project}"
+      }
+    ],
+    "expected_outcome": "Project operational and verified",
+    "verification_requirements": [
+      "outcome_verified",
+      "http_responsive"
+    ],
+    "risk_level": "LOW",
+    "confidence": 0.9,
+    "success_count": 2,
+    "failure_count": 0,
+    "reuse_count": 1,
+    "adaptation_count": 0,
+    "created_at": 1790248150.800374,
+    "last_used_at": 1790248151.0049338,
+    "last_verified_at": 1790248151.004936,
+    "expires_at": null,
+    "status": "ACTIVE",
+    "source_experience_ids": [],
+    "version": 1,
+    "evolution_history": [],
+    "metadata": {}
+  },
+  {
+    "skill_id": "skill_16d66f65",
+    "skill_name": "FIX_FLOW_PORT",
+    "skill_type": "REPAIR_SKILL",
+    "description": "desc",
+    "goal_pattern": "fix FLOW port",
+    "problem_pattern": null,
+    "project_scope": "FLOW",
+    "parameters": {},
+    "required_preconditions": [
+      "project_exists"
+    ],
+    "workflow_steps": [],
+    "expected_outcome": "Project operational and verified",
+    "verification_requirements": [
+      "outcome_verified",
+      "http_responsive"
+    ],
+    "risk_level": "LOW",
+    "confidence": 0.85,
+    "success_count": 1,
+    "failure_count": 0,
+    "reuse_count": 0,
+    "adaptation_count": 0,
+    "created_at": 1790248151.674162,
+    "last_used_at": 1790248151.674162,
+    "last_verified_at": 1790248151.674162,
+    "expires_at": null,
+    "status": "ACTIVE",
+    "source_experience_ids": [],
+    "version": 1,
+    "evolution_history": [],
+    "metadata": {}
+  },
+  {
+    "skill_id": "skill_ae91f034",
+    "skill_name": "FIX_PROJECT_PORT_CONFLICT",
+    "skill_type": "REPAIR_SKILL",
+    "description": "Diagnose and resolve conflicting process occupying target project port, restart, and verify HTTP health.",
+    "goal_pattern": "fix port conflict for {project}",
+    "problem_pattern": "PORT_CONFLICT",
+    "project_scope": "FLOW",
+    "parameters": {
+      "project": {
+        "type": "string",
+        "default": "FLOW",
+        "description": "Target project name"
+      },
+      "port": {
+        "type": "integer",
+        "default": 3000,
+        "description": "Listening TCP port"
+      }
+    },
+    "required_preconditions": [
+      "project_exists"
+    ],
+    "workflow_steps": [
+      {
+        "action": "terminate_conflicting_processes",
+        "target": "{project}",
+        "risk_level": "LOW",
+        "params": {
+          "port": "{port}"
+        }
+      },
+      {
+        "action": "restart_project_server",
+        "target": "{project}",
+        "risk_level": "LOW",
+        "params": {
+          "port": "{port}"
+        }
+      }
+    ],
+    "expected_outcome": "'FLOW' is operational and responsive on port 3000",
+    "verification_requirements": [
+      "outcome_verified",
+      "http_responsive"
+    ],
+    "risk_level": "LOW",
+    "confidence": 1.0,
+    "success_count": 4,
+    "failure_count": 0,
+    "reuse_count": 0,
+    "adaptation_count": 0,
+    "created_at": 1790248151.803252,
+    "last_used_at": 1790248151.803252,
+    "last_verified_at": 1790248192.03123,
+    "expires_at": null,
+    "status": "ACTIVE",
+    "source_experience_ids": [],
+    "version": 1,
+    "evolution_history": [],
+    "metadata": {}
+  },
+  {
+    "skill_id": "skill_bd80a119",
+    "skill_name": "FIX_PORT_CONFLICT",
+    "skill_type": "REPAIR_SKILL",
+    "description": "Diagnostic repair for port conflict",
+    "goal_pattern": "Fix and run FLOW",
+    "problem_pattern": null,
+    "project_scope": "FLOW",
+    "parameters": {},
+    "required_preconditions": [
+      "project_exists"
+    ],
+    "workflow_steps": [
+      {
+        "action": "kill_port_3000"
+      }
+    ],
+    "expected_outcome": "Project operational and verified",
+    "verification_requirements": [
+      "outcome_verified",
+      "http_responsive"
+    ],
+    "risk_level": "LOW",
+    "confidence": 0.98,
+    "success_count": 1,
+    "failure_count": 0,
+    "reuse_count": 0,
+    "adaptation_count": 0,
+    "created_at": 1790248151.804728,
+    "last_used_at": 1790248151.804728,
+    "last_verified_at": 1790248151.804728,
+    "expires_at": null,
+    "status": "ACTIVE",
+    "source_experience_ids": [],
+    "version": 1,
+    "evolution_history": [],
+    "metadata": {}
+  },
+  {
+    "skill_id": "skill_7266821b",
+    "skill_name": "REPAIR_FLOW_DEV",
+    "skill_type": "REPAIR_SKILL",
+    "description": "Repair dev server",
+    "goal_pattern": "Repair FLOW",
+    "problem_pattern": null,
+    "project_scope": "FLOW",
+    "parameters": {},
+    "required_preconditions": [
+      "project_exists"
+    ],
+    "workflow_steps": [
+      {
+        "action": "repair"
+      }
+    ],
+    "expected_outcome": "Project operational and verified",
+    "verification_requirements": [
+      "outcome_verified",
+      "http_responsive"
+    ],
+    "risk_level": "LOW",
+    "confidence": 0.9500000000000001,
+    "success_count": 2,
+    "failure_count": 0,
+    "reuse_count": 1,
+    "adaptation_count": 0,
+    "created_at": 1790248151.8367512,
+    "last_used_at": 1790248151.8377101,
+    "last_verified_at": 1790248151.8377101,
+    "expires_at": null,
+    "status": "ACTIVE",
+    "source_experience_ids": [],
+    "version": 1,
+    "evolution_history": [],
+    "metadata": {}
+  }
+]

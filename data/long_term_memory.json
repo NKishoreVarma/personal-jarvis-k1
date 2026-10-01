@@ -1,0 +1,84 @@
+[
+  {
+    "memory_id": "mem_1d96a1a7",
+    "memory_type": "WORKFLOW_EXPERIENCE",
+    "subject": "Startup repair pattern for FLOW",
+    "content": "Startup failure for 'FLOW' caused by PORT_CONFLICT. Resolved successfully by: terminate_conflicting_processes -> restart_project_server. Verified listening on port 3000.",
+    "embedding_reference": null,
+    "goal_id": null,
+    "turn_id": null,
+    "project_id": "FLOW",
+    "session_id": null,
+    "source_type": "experience_learning",
+    "source_id": null,
+    "source": "experience_learning",
+    "confidence": 0.9,
+    "importance": 0.85,
+    "freshness_score": 1.0,
+    "freshness": 1.0,
+    "created_at": 1790248190.2175841,
+    "updated_at": 1790248190.2175841,
+    "expires_at": null,
+    "last_accessed_at": 1790248190.2175848,
+    "access_count": 0,
+    "supersedes_memory_id": null,
+    "contradiction_group_id": null,
+    "verification_state": "VERIFIED",
+    "privacy_scope": "LOCAL",
+    "project_scope": "FLOW",
+    "tags": [
+      "repair_pattern",
+      "port_conflict",
+      "flow"
+    ],
+    "metadata": {
+      "problem_category": "PORT_CONFLICT",
+      "successful_actions": [
+        "terminate_conflicting_processes",
+        "restart_project_server"
+      ],
+      "verified_port": 3000
+    }
+  },
+  {
+    "memory_id": "mem_fcbe3e7d",
+    "memory_type": "WORKFLOW_EXPERIENCE",
+    "subject": "Startup repair pattern for FLOW",
+    "content": "Startup failure for 'FLOW' caused by PORT_CONFLICT. Resolved successfully by: terminate_conflicting_processes -> restart_project_server. Verified listening on port 3000.",
+    "embedding_reference": null,
+    "goal_id": null,
+    "turn_id": null,
+    "project_id": "FLOW",
+    "session_id": null,
+    "source_type": "experience_learning",
+    "source_id": null,
+    "source": "experience_learning",
+    "confidence": 0.9,
+    "importance": 0.85,
+    "freshness_score": 1.0,
+    "freshness": 1.0,
+    "created_at": 1790248192.0304,
+    "updated_at": 1790248192.0304,
+    "expires_at": null,
+    "last_accessed_at": 1790248192.030401,
+    "access_count": 0,
+    "supersedes_memory_id": null,
+    "contradiction_group_id": null,
+    "verification_state": "VERIFIED",
+    "privacy_scope": "LOCAL",
+    "project_scope": "FLOW",
+    "tags": [
+      "repair_pattern",
+      "port_conflict",
+      "flow"
+    ],
+    "metadata": {
+      "problem_category": "PORT_CONFLICT",
+      "successful_actions": [
+        "terminate_conflicting_processes",
+        "restart_project_server"
+      ],
+      "verified_port": 3000
+    }
+  }
+]

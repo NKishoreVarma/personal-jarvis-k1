@@ -1,0 +1,9 @@
+[submodule "research/gaurav_jarvis"]
+	path = research/gaurav_jarvis
+	url = https://github.com/GauravSingh9356/J.A.R.V.I.S.git
+[submodule "research/jarvis_desktop_voice_assistant"]
+	path = research/jarvis_desktop_voice_assistant
+	url = https://github.com/kishanrajput23/Jarvis-Desktop-Voice-Assistant.git
+[submodule "research/openjarvis"]
+	path = research/openjarvis
+	url = https://github.com/open-jarvis/OpenJarvis.git
